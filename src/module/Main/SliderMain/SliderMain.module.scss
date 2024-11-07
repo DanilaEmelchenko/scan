@@ -1,0 +1,29 @@
+@use "../../../app/styles/variables" as var;
+@use "../../../app/styles/fonts";
+
+.slider {
+  margin-top: 109px;
+  & .title {
+    margin-bottom: 70px;
+    font-weight: 900;
+    font-size: 45px;
+    letter-spacing: 0.01em;
+    font-family: fonts, "Ferry", sans-serif;
+  }
+  & .slide {
+    height: 225px;
+    padding: 30px 25px 0 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    background-color: var.$color-white;
+    & .text {
+      margin-top: 19px;
+      font-size: 18px;
+      letter-spacing: 0.01em;
+    }
+  }
+  & .image {
+    width: 100%;
+    margin-top: 70px;
+  }
+}

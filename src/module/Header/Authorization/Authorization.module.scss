@@ -1,0 +1,29 @@
+@use "../../../app/styles/variables" as var;
+@use "../../../app/styles/fonts";
+
+.authorization {
+  display: flex;
+  align-items: center;
+  & .authorization__register {
+    text-decoration: none;
+    opacity: 0.4;
+    margin-right: 18px;
+    color: var.$color-black;
+  }
+  & .authorization__border {
+    width: 2px;
+    height: 26px;
+    background-color: var.$color-birch;
+    transform: rotate(-180deg);
+    opacity: 0.6;
+    margin-right: 21px;
+  }
+  & .authorization__enter {
+    font-weight: 500;
+    text-decoration: none;
+    background-color: var.$color-birch;
+    border-radius: 5px;
+    padding: 4px 11px 5px 11px;
+    color: var.$color-black;
+  }
+}

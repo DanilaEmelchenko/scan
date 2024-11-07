@@ -1,0 +1,98 @@
+@use "../../../app/styles/variables" as var;
+@use "../../../app/styles/fonts";
+
+.tarifs {
+  margin-top: 107.48px;
+  & .title {
+    font-weight: 900;
+    font-size: 45px;
+    letter-spacing: 0.01em;
+    font-family: fonts, "Ferry", sans-serif;
+  }
+  & .cards {
+    margin-top: 70px;
+    & .card {
+      border-radius: 10px;
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+      background-color: var.$color-white;
+      width: 415px;
+    }
+    & .card__top {
+      display: flex;
+      align-items: center;
+      border-radius: 10px 10px 0 0;
+      padding: 11px 15.76px 34px 30px;
+      background-color: var.$color-orange;
+      & .card__top-content {
+        & .card__top-title {
+          font-weight: 500;
+          font-size: 30px;
+          letter-spacing: 0.01em;
+        }
+        & .card__top-text {
+          margin-top: 10px;
+          font-size: 18px;
+          letter-spacing: 0.01em;
+        }
+      }
+    }
+    & .card__bottom {
+      padding: 12px 10px 24px 30px;
+      & .card__bottom-content {
+        display: flex;
+        align-items: center;
+        gap: 19px;
+        & .card__bottom-price {
+          font-weight: 500;
+          font-size: 30px;
+          letter-spacing: 0.01em;
+        }
+        & .card__bottom-priceThrough {
+          font-weight: 500;
+          font-size: 25px;
+          letter-spacing: 0.01em;
+          text-decoration: line-through;
+          opacity: 0.5;
+        }
+      }
+      & .card__bottom-priceCredit {
+        margin-top: 10px;
+        font-size: 18px;
+        letter-spacing: 0.01em;
+      }
+      & .card__bottom-list {
+        margin-top: 50px;
+        & .card__bottom-listTitle {
+          font-weight: 500;
+          font-size: 20px;
+          letter-spacing: 0.01em;
+        }
+        & .card__bottom-listItemsWrapper {
+          margin-top: 10px;
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          & .card__bottom-listItems {
+            display: flex;
+            gap: 8px;
+          }
+        }
+      }
+      & .card__bottom-buttonWrapper {
+        display: flex;
+        align-items: center;
+        & .card__bottom-button {
+          margin-top: 55px;
+          margin-right: 20px;
+          border-radius: 5px;
+          background-color: var.$color-purple;
+          padding: 18px 0;
+          width: 100%;
+          font-size: 20px;
+          letter-spacing: 0.01em;
+          color: var.$color-white;
+        }
+      }
+    }
+  }
+}

@@ -8,7 +8,11 @@ interface IProviders {
 }
 
 const Providers: FC<IProviders> = ({ children }) => {
-  return <Provider store={store}>{children}</Provider>;
+  return (
+    <Provider store={store}>
+      {children}
+    </Provider>
+  );
 };
 
 export default Providers;
