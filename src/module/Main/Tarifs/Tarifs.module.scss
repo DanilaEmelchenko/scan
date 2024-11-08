@@ -3,36 +3,38 @@
 
 .tarifs {
   margin-top: 107.48px;
+  font-size: 18px;
+  letter-spacing: 0.01em;
   & .title {
     font-weight: 900;
     font-size: 45px;
-    letter-spacing: 0.01em;
     font-family: fonts, "Ferry", sans-serif;
   }
   & .cards {
     margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    gap: 38px;
     & .card {
       border-radius: 10px;
       box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
       background-color: var.$color-white;
-      width: 415px;
+      width: 100%;
     }
     & .card__top {
       display: flex;
       align-items: center;
+      justify-content: space-between;
       border-radius: 10px 10px 0 0;
       padding: 11px 15.76px 34px 30px;
-      background-color: var.$color-orange;
+      height: 132px;
       & .card__top-content {
         & .card__top-title {
           font-weight: 500;
           font-size: 30px;
-          letter-spacing: 0.01em;
         }
         & .card__top-text {
           margin-top: 10px;
-          font-size: 18px;
-          letter-spacing: 0.01em;
         }
       }
     }
@@ -45,27 +47,22 @@
         & .card__bottom-price {
           font-weight: 500;
           font-size: 30px;
-          letter-spacing: 0.01em;
         }
         & .card__bottom-priceThrough {
           font-weight: 500;
           font-size: 25px;
-          letter-spacing: 0.01em;
           text-decoration: line-through;
           opacity: 0.5;
         }
       }
       & .card__bottom-priceCredit {
         margin-top: 10px;
-        font-size: 18px;
-        letter-spacing: 0.01em;
       }
       & .card__bottom-list {
-        margin-top: 50px;
+        margin-top: 59px;
         & .card__bottom-listTitle {
           font-weight: 500;
           font-size: 20px;
-          letter-spacing: 0.01em;
         }
         & .card__bottom-listItemsWrapper {
           margin-top: 10px;
@@ -81,6 +78,21 @@
       & .card__bottom-buttonWrapper {
         display: flex;
         align-items: center;
+        & ::before {
+          content: "";
+          position: absolute;
+          height: 150px;
+          width: 50px;
+          background: #fff;
+          left: -55px;
+          top: -40px;
+          transform: rotate(37deg);
+          transition: all 0.5s ease;
+          opacity: 0.3;
+        }
+        & :hover::before {
+          left: 95%;
+        }
         & .card__bottom-button {
           margin-top: 55px;
           margin-right: 20px;
@@ -89,8 +101,9 @@
           padding: 18px 0;
           width: 100%;
           font-size: 20px;
-          letter-spacing: 0.01em;
           color: var.$color-white;
+          position: relative;
+          overflow: hidden;
         }
       }
     }
