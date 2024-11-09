@@ -5,7 +5,7 @@ import Navbar from "./Navbar/Navbar";
 const Header = () => {
   return (
     <header className={s.header}>
-      <img src="icons/logo-header.svg" alt="logo" />
+      <img className={s.logo} src="icons/logo-header.svg" alt="logo" />
       <Navbar />
       <Authorization />
     </header>

@@ -2,11 +2,11 @@
 @use "../../../app/styles/fonts";
 
 .slider {
-  margin-top: 109px;
+  margin-top: clamp(3.438rem, 2.473rem + 4.82vw, 6.813rem);
   & .title {
-    margin-bottom: 70px;
+    margin-bottom: clamp(2rem, 1.321rem + 3.39vw, 4.375rem);
     font-weight: 900;
-    font-size: 45px;
+    font-size: clamp(1.75rem, 1.446rem + 1.52vw, 2.813rem);
     letter-spacing: 0.01em;
     font-family: fonts, "Ferry", sans-serif;
   }

@@ -2,16 +2,16 @@
 @use "../../../app/styles/fonts";
 
 .tarifs {
-  margin-top: 107.48px;
+  margin-top: clamp(5rem, 4.518rem + 2.41vw, 6.688rem);
   font-size: 18px;
   letter-spacing: 0.01em;
   & .title {
     font-weight: 900;
-    font-size: 45px;
+    font-size: clamp(1.75rem, 1.446rem + 1.52vw, 2.813rem);
     font-family: fonts, "Ferry", sans-serif;
   }
   & .cards {
-    margin-top: 70px;
+    margin-top: clamp(2.313rem, 1.723rem + 2.95vw, 4.375rem);
     display: flex;
     justify-content: center;
     gap: 38px;
@@ -26,7 +26,7 @@
       align-items: center;
       justify-content: space-between;
       border-radius: 10px 10px 0 0;
-      padding: 11px 15.76px 34px 30px;
+      padding: 30px 15px 34px 25px;
       height: 132px;
       & .card__top-content {
         & .card__top-title {
@@ -84,14 +84,14 @@
           height: 150px;
           width: 50px;
           background: #fff;
-          left: -55px;
+          left: -100px;
           top: -40px;
           transform: rotate(37deg);
-          transition: all 0.5s ease;
+          transition: all 1s ease;
           opacity: 0.3;
         }
         & :hover::before {
-          left: 95%;
+          left: 110%;
         }
         & .card__bottom-button {
           margin-top: 55px;

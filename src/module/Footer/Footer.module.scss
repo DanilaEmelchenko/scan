@@ -2,14 +2,19 @@
 @use "../../app/styles/variables" as var;
 
 .footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 25px 45px 25px 60px;
   background-color: var.$color-primary;
   font-size: 14px;
   letter-spacing: 0.01em;
   color: var.$color-white;
+  padding-right: clamp(1.625rem, 1.018rem + 3.04vw, 3.75rem);
+  padding-left: clamp(0.875rem, 0.054rem + 4.11vw, 3.75rem);
+  & .container {
+    margin: 0 auto;
+    max-width: 1320px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   & .content {
     text-align: right;
     & .link {

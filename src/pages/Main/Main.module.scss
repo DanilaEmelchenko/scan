@@ -1,9 +1,11 @@
 .main {
-  padding: 69px 60px 118px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: clamp(1.25rem, 0.375rem + 4.38vw, 4.313rem)
+    clamp(1.625rem, 1.018rem + 3.04vw, 3.75rem)
+    clamp(2.688rem, 1.348rem + 6.7vw, 7.375rem)
+    clamp(0.875rem, 0.054rem + 4.11vw, 3.75rem);
 }
 
 @media only screen and (max-width: 375px) {
-  .main {
-    padding: 20px 26px 43px 14px;
-  }
 }

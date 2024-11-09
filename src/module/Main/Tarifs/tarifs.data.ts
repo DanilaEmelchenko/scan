@@ -43,7 +43,7 @@ export const tarifsData = [
     checkMark: "icons/main/tariffs/check-mark.svg",
     price: "2 379 ₽",
     priceThrough: "3 700 ₽",
-    priceCredit: "",
+    priceCredit: "или 300 ₽/мес. при рассрочке на 24 мес.",
     list: [
       "Все пункты тарифа Pro",
       "Безлимитное количество запросов",

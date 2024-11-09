@@ -44,7 +44,6 @@ const Tarifs = () => {
                 </p>
                 <div
                   className={s["card__bottom-list"]}
-                  style={tarif.id === 3 ? { marginTop: "96px" } : {}}
                 >
                   <h4 className={s["card__bottom-listTitle"]}>
                     В тариф входит:

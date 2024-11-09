@@ -2,16 +2,16 @@
 @use "../../app/styles/variables" as var;
 
 .header {
-  padding: 15px 60px;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-right: clamp(1.625rem, 1.018rem + 3.04vw, 3.75rem);
+  padding-left: clamp(0.875rem, 0.054rem + 4.11vw, 3.75rem);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 14px;
-  letter-spacing: 0.01em;
 }
 
 @media only screen and (max-width: 375px) {
-  .header {
-    padding: 9px 26px 14px;
-  }
 }
