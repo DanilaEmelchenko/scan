@@ -10,16 +10,24 @@
     letter-spacing: 0.01em;
     font-family: fonts, "Ferry", sans-serif;
   }
-  & .slide {
-    height: 225px;
-    padding: 30px 25px 0 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
-    background-color: var.$color-white;
-    & .text {
-      margin-top: 19px;
-      font-size: 18px;
-      letter-spacing: 0.01em;
+  & .slider-container {
+    max-width: 1270px;
+    margin: 0 auto;
+    & .slide {
+      width: 400px !important;
+      height: 225px;
+      cursor: pointer;
+      transition: box-shadow 0.3s ease;
+      margin: 22px 0 22px 11px;
+      padding: 30px 25px 0 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+      background-color: var.$color-white;
+      & .text {
+        margin-top: 19px;
+        font-size: 18px;
+        letter-spacing: 0.01em;
+      }
     }
   }
   & .image {
