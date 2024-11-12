@@ -1,0 +1,22 @@
+@use "../../../app/styles/variables" as var;
+
+.form {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  & .label {
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    color: var.$color-gray-light;
+    & .input {
+      width: 100%;
+      margin-top: 15px;
+      border: 1px solid var.$color-gray;
+      border-radius: 5px;
+      height: 43px;
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
+      background: var.$color-white;
+    }
+  }
+}
