@@ -15,11 +15,18 @@
     display: flex;
     justify-content: center;
     gap: 38px;
+    @media only screen and (max-width: 1318px) {
+      flex-direction: column;
+      align-items: center;
+    }
     & .card {
       border-radius: 10px;
       box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
       background-color: var.$color-white;
-      width: 100%;
+      width: 415px;
+      @media only screen and (max-width: 375px) {
+        width: 335px;
+      }
     }
     & .card__top {
       display: flex;
@@ -35,6 +42,13 @@
         }
         & .card__top-text {
           margin-top: 10px;
+        }
+      }
+      & .card__top-icon {
+        @media only screen {
+          width: 50px;
+          height: 50px;
+          margin-top: -45px;
         }
       }
     }

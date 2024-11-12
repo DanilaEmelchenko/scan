@@ -11,7 +11,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-@media only screen and (max-width: 375px) {
+  & .logo-footer,
+  & .logo-header {
+    z-index: 5;
+  }
+  & .logo-footer {
+    margin-top: -22.5px;
+  }
 }

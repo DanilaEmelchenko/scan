@@ -1,16 +1,16 @@
 import { Provider } from "react-redux";
 import { store } from "../store/store";
 import { FC } from "react";
+import { BurgerMenuProvider } from "../../context/BurgerMenuContext";
 
 interface IProviders {
-  /** Content that will be wrapped by providers. */
   readonly children: JSX.Element;
 }
 
 const Providers: FC<IProviders> = ({ children }) => {
   return (
     <Provider store={store}>
-      {children}
+      <BurgerMenuProvider>{children}</BurgerMenuProvider>
     </Provider>
   );
 };

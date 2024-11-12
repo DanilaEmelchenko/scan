@@ -13,20 +13,35 @@
   & .slider-container {
     max-width: 1270px;
     margin: 0 auto;
+    @media screen and (max-width: 1380px) {
+      max-width: 848px;
+    }
+    @media screen and (max-width: 1000px) {
+      max-width: 425px;
+    }
+    @media screen and (max-width: 375px) {
+      max-width: 280px;
+    }
     & .slide {
       width: 400px !important;
       height: 225px;
       cursor: pointer;
-      transition: box-shadow 0.3s ease;
       margin: 22px 0 22px 11px;
       padding: 30px 25px 0 20px;
       border-radius: 10px;
       box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
       background-color: var.$color-white;
+      @media only screen and (max-width: 375px) {
+        width: 255px !important;
+        height: 188px;
+      }
       & .text {
         margin-top: 19px;
         font-size: 18px;
         letter-spacing: 0.01em;
+        @media screen and (max-width: 375px) {
+          font-size: 12px;
+        }
       }
     }
   }

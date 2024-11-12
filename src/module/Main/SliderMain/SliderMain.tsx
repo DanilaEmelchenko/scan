@@ -38,6 +38,24 @@ const SliderMain = () => {
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
+    centerMode: true,
+    centerPadding: "1px",
+    responsive: [
+      {
+        breakpoint: 1380,
+        settings: {
+          slidesToShow: 2,
+          centerPadding: "1px",
+        },
+      },
+      {
+        breakpoint: 1000,
+        settings: {
+          slidesToShow: 1,
+          centerPadding: "-25px",
+        },
+      },
+    ],
   };
 
   return (

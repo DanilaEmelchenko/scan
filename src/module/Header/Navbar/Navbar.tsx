@@ -7,7 +7,7 @@ const Navbar = () => {
       <ul className={s.navbar__list}>
         {navbarData.map((item) => (
           <li key={item.id} className={s.navbar__item}>
-            <a className={s.navbar__link} href="">
+            <a className={s.navbar__link} href="#">
               {item.text}
             </a>
           </li>

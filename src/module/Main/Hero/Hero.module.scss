@@ -5,7 +5,14 @@
   display: flex;
   justify-content: space-between;
   letter-spacing: 0.01em;
+  @media only screen and (max-width: 935px) {
+    flex-direction: column;
+    align-items: center;
+  }
   & .content {
+    @media screen and (max-width: 375px) { 
+      width: 361px;
+    }
     & .title {
       font-weight: 900;
       font-size: clamp(1.75rem, 1.179rem + 2.86vw, 3.75rem);
@@ -15,18 +22,24 @@
       font-size: 20px;
       margin-top: 20px;
     }
-    & .button {
-      padding: 14px 64px;
-      margin-top: clamp(2rem, 1.321rem + 3.39vw, 4.375rem);
-      border-radius: 5px;
-      background-color: var.$color-purple;
-      color: var.$color-white;
-      font-weight: 500;
-      font-size: 22px;
-      cursor: pointer;
+    & .buttonWrapper {
+      @media only screen and (max-width: 375px) {
+        text-align: center;
+      }
+      & .button {
+        padding: 14px 64px;
+        margin-top: clamp(2rem, 1.321rem + 3.39vw, 4.375rem);
+        border-radius: 5px;
+        background-color: var.$color-purple;
+        color: var.$color-white;
+        font-weight: 500;
+        font-size: 22px;
+        cursor: pointer;
+      }
     }
   }
   & .image {
-    width: 100%;
+    width: clamp(21.688rem, 15.278rem + 32.05vw, 39.313rem);
+    height: clamp(20.25rem, 13.523rem + 33.64vw, 38.75rem);
   }
 }

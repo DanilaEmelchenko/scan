@@ -30,7 +30,11 @@ const Tarifs = () => {
                     {tarif.text}
                   </p>
                 </div>
-                <img src={tarif.icon} alt="icon" />
+                <img
+                  className={s["card__top-icon"]}
+                  src={tarif.icon}
+                  alt="icon"
+                />
               </div>
               <div className={s.card__bottom}>
                 <div className={s["card__bottom-content"]}>
@@ -42,9 +46,7 @@ const Tarifs = () => {
                 <p className={s["card__bottom-priceCredit"]}>
                   {tarif.priceCredit}
                 </p>
-                <div
-                  className={s["card__bottom-list"]}
-                >
+                <div className={s["card__bottom-list"]}>
                   <h4 className={s["card__bottom-listTitle"]}>
                     В тариф входит:
                   </h4>
