@@ -3,7 +3,7 @@
 
 .authorization {
   position: relative;
-  width: 429px;
+  width: clamp(20.938rem, 18.801rem + 10.68vw, 26.813rem);
   padding: 25px 25px 39px 25px;
   position: relative;
   border-radius: 10px;
@@ -13,6 +13,10 @@
     position: absolute;
     top: -47px;
     left: -45px;
+    @media screen and (max-width: 474px) {
+      top: -75px;
+      left: 86px;
+    }
   }
   & .tabs {
     display: flex;
