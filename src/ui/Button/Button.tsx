@@ -3,6 +3,8 @@ import { FC } from "react";
 interface IButton {
   children: React.ReactNode;
   className?: string;
+  type?: "submit";
+  disabled?: boolean;
 }
 
 const Button: FC<IButton> = ({ children, ...props }) => {

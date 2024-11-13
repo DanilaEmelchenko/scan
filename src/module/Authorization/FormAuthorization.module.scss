@@ -1,0 +1,77 @@
+@use "../../app/styles/variables" as var;
+@use "../../app/styles/fonts";
+
+.authorization {
+  position: relative;
+  width: 429px;
+  padding: 25px 25px 39px 25px;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+  background: var.$color-white;
+  & .castle {
+    position: absolute;
+    top: -47px;
+    left: -45px;
+  }
+  & .tabs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    & .enter,
+    & .register {
+      font-size: 16px;
+      letter-spacing: 0.02em;
+      cursor: pointer;
+    }
+    & .enter {
+      padding-bottom: 8px;
+      text-align: center;
+      width: 151px;
+      color: var.$color-primary;
+      border-bottom: 2px solid var.$color-primary;
+    }
+    & .register {
+      padding-bottom: 8px;
+      text-align: center;
+      width: 213px;
+      font-size: 16px;
+      letter-spacing: 0.02em;
+      color: var.$color-gray-light;
+      border-bottom: 2px solid var.$color-gray-light;
+    }
+  }
+  & .forgot {
+    cursor: pointer;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: var.$color-purple;
+  }
+  & .or {
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    color: var.$color-gray-light;
+  }
+  & .socials {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    & .google,
+    & .facebook,
+    & .yandex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 96px;
+      height: 31px;
+      border: 1px solid rgba(89, 112, 255, 0.51);
+      border-radius: 3px;
+    }
+  }
+}
