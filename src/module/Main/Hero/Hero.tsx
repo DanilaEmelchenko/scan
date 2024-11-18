@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Button from "../../../ui/Button/Button";
 import s from "./Hero.module.scss";
 
@@ -13,7 +14,9 @@ const Hero = () => {
           электронную почту.
         </p>
         <div className={s.buttonWrapper}>
-          <Button className={s.button}>Запросить данные</Button>
+          <Link to={"/search"}>
+            <Button className={s.button}>Запросить данные</Button>
+          </Link>
         </div>
       </div>
       <img className={s.image} src="images/main/hero-image.svg" alt="image" />

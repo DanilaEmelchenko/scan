@@ -1,0 +1,25 @@
+@use "../../app/styles/variables" as var;
+
+.select {
+  padding: 13px 17px;
+  width: 242px;
+  border: 1px solid var.$color-gray-light;
+  border-radius: 5px;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  background-image: url("icons/arrowDrop.svg");
+  background-position: right 10px center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  color: var.$color-gray;
+  &::-ms-expand {
+    display: none;
+  }
+  @media only screen and (max-width: 375px) {
+    width: 100%;
+  }
+}

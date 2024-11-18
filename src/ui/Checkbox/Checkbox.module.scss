@@ -1,0 +1,27 @@
+@use "../../app/styles/variables" as var;
+
+.checkbox {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  transition: 500ms;
+  border: 1px solid var.$color-black;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    background-image: url("icons/checkbox.svg");
+    background-repeat: no-repeat;
+    transition: 500ms;
+  }
+  &:checked::after {
+    width: 14px;
+    height: 14px;
+    transition: 500ms;
+  }
+}

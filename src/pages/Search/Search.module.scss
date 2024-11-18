@@ -1,0 +1,58 @@
+@use "../../app/styles/variables" as var;
+@use "../../app/styles/fonts";
+
+.search {
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: clamp(1.25rem, 0.136rem + 5.57vw, 4.313rem)
+    clamp(0rem, -0.977rem + 4.89vw, 2.688rem)
+    clamp(1.563rem, 0.676rem + 4.43vw, 4rem)
+    clamp(0.875rem, -0.261rem + 5.68vw, 4rem);
+  & .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    & .left {
+      width: clamp(22.563rem, 12.199rem + 51.82vw, 51.063rem);
+      & .title {
+        font-family: fonts, "Ferry", sans-serif;
+        font-weight: 900;
+        font-size: clamp(1.75rem, 1.477rem + 1.36vw, 2.5rem);
+        letter-spacing: 0.03em;
+      }
+      & .text {
+        margin-top: 25px;
+        width: clamp(18.563rem, 13.176rem + 26.93vw, 33.375rem);
+        font-size: 20px;
+        letter-spacing: 0.02em;
+      }
+    }
+    & .right {
+      display: flex;
+      gap: 166px;
+      & .folders {
+        @media only screen and (max-width: 1190px) {
+          display: none;
+        }
+      }
+    }
+  }
+  & .bottom {
+    margin-top: clamp(1.313rem, 0.744rem + 2.84vw, 2.875rem);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    @media only screen and (max-width: 1370px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    & .image {
+      width: 442px;
+      height: 470px;
+      @media only screen and (max-width: 1370px) {
+        margin-top: 24px;
+      }
+    }
+  }
+}

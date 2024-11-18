@@ -1,5 +1,6 @@
 import Authorization from '../../pages/Authorization/Authorization';
 import Main from "../../pages/Main/Main";
+import Search from '../../pages/Search/Search';
 
 interface IRoute {
   path: string;
@@ -17,5 +18,10 @@ export const routers: IRoute[] = [
     path: "/authorization",
     name: "authorization",
     component: Authorization,
+  },
+  {
+    path: "/search",
+    name: "search",
+    component: Search,
   },
 ];
