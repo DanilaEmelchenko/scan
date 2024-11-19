@@ -15,8 +15,12 @@
       border-radius: 5px;
       font-size: 14px;
       letter-spacing: 0.03em;
+      outline: none;
       @media only screen and (max-width: 375px) {
         width: 100%;
+      }
+      &::placeholder {
+        color: var.$color-gray;
       }
     }
   }

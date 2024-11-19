@@ -9,7 +9,7 @@ const FormInput = () => {
       <label className={s.label} htmlFor="inn">
         ИНН компании*
         <br />
-        <Input className={s.input} placeholder="10 цифр" type="number" />
+        <Input className={s.input} placeholder="10 цифр" type="text" />
       </label>
       <label className={s.label} htmlFor="">
         Тональность

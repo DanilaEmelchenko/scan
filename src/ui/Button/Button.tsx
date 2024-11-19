@@ -5,6 +5,7 @@ interface IButton {
   className?: string;
   type?: "submit";
   disabled?: boolean;
+  onClick?: (e: React.MouseEvent<HTMLElement>) => void;
 }
 
 const Button: FC<IButton> = ({ children, ...props }) => {

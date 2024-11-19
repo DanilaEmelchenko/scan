@@ -7,7 +7,7 @@ const Footer = () => {
   return toggleBurgerMenu ? null : (
     <footer className={s.footer}>
       <div className={s.container}>
-        <img src="icons/logo-footer.svg" alt="logo" />
+        <img src="/icons/logo-footer.svg" alt="logo" />
         <div className={s.content}>
           <p className={s.text}>
             г. Москва, Цветной б-р, 40 <br />

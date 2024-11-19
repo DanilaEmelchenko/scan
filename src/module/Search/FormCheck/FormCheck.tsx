@@ -1,6 +1,7 @@
 import Button from "../../../ui/Button/Button";
 import s from "./FormCheck.module.scss";
 import { arr } from "./formCheck.data";
+import { Link } from "react-router-dom";
 
 const FormCheck = () => {
   return (
@@ -14,7 +15,9 @@ const FormCheck = () => {
         </div>
       ))}
       <div className={s.buttonWrapper}>
-        <Button className={s.button}>Поиск</Button>
+        <Link className={s.button} to="/search/results">
+          Поиск
+        </Link>
         <span className={s.required}>* Обязательные к заполнению поля</span>
       </div>
     </div>

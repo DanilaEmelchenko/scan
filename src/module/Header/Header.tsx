@@ -12,13 +12,13 @@ const Header = () => {
       {toggleBurgerMenu ? (
         <img
           className={s["logo-footer"]}
-          src="icons/logo-footer.svg"
+          src="/icons/logo-footer.svg"
           alt="logo"
         />
       ) : (
         <img
           className={s["logo-header"]}
-          src="icons/logo-header.svg"
+          src="/icons/logo-header.svg"
           alt="logo"
         />
       )}

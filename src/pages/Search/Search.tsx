@@ -5,6 +5,7 @@ import { BurgerMenuContext } from "../../context/BurgerMenuContext";
 
 const Search = () => {
   const { toggleBurgerMenu } = useContext(BurgerMenuContext);
+
   return toggleBurgerMenu ? null : (
     <main className={s.search}>
       <div className={s.top}>
