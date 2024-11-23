@@ -1,0 +1,79 @@
+@use "../../../app/styles/variables" as var;
+@use "../../../app/styles/fonts";
+
+.listDocuments {
+  margin-top: 107px;
+  & .title {
+    font-family: fonts, "Ferry", sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+    letter-spacing: 0.02em;
+  }
+  & .cards {
+    margin-top: clamp(2.125rem, 1.58rem + 2.73vw, 3.625rem);
+    & .card {
+      width: 641px;
+      padding: 19px clamp(0.938rem, 0.597rem + 1.7vw, 1.875rem)
+        clamp(1.125rem, 0.739rem + 1.93vw, 2.188rem)
+        clamp(0.938rem, 0.597rem + 1.7vw, 1.875rem);
+      border-radius: 10px;
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+      background: var.$color-white;
+      & .top {
+        display: flex;
+        justify-content: space-between;
+        & .date,
+        & .source {
+          font-size: 16px;
+          letter-spacing: 0.02em;
+          color: var.$color-gray;
+        }
+        & .source {
+          text-decoration: underline;
+          text-decoration-skip-ink: none;
+        }
+      }
+      & .title {
+        margin-top: 24px;
+        font-weight: 500;
+        font-size: 26px;
+        letter-spacing: 0.02em;
+      }
+      & .subtitle {
+        padding: 4px 0;
+        text-align: center;
+        width: 157px;
+        margin: 14px 0;
+        font-size: 12px;
+        letter-spacing: 0.02em;
+        border-radius: 5px;
+        background-color: var.$color-orange;
+      }
+      & .text {
+        margin-top: 20px;
+        font-size: 16px;
+        letter-spacing: 0.02em;
+        opacity: 0.5;
+      }
+      & .bottom {
+        margin-top: 32px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        & .button {
+          padding: 14px 0;
+          font-size: 16px;
+          letter-spacing: 0.02em;
+          background-color: var.$color-birch;
+          border-radius: 5px;
+          width: 223px;
+        }
+        & .words {
+          font-size: 16px;
+          letter-spacing: 0.02em;
+          color: var.$color-gray;
+        }
+      }
+    }
+  }
+}

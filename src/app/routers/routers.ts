@@ -1,4 +1,4 @@
-import Results from '../../module/Results/Results';
+import Results from "../../module/Results/Results";
 import Authorization from "../../pages/Authorization/Authorization";
 import Main from "../../pages/Main/Main";
 import Search from "../../pages/Search/Search";
@@ -9,7 +9,7 @@ interface IRoute {
   component: React.FC;
 }
 
-export const routers: IRoute[] = [
+export const publicRouters: IRoute[] = [
   {
     path: "/main",
     name: "Main",
@@ -19,6 +19,14 @@ export const routers: IRoute[] = [
     path: "/authorization",
     name: "authorization",
     component: Authorization,
+  },
+];
+
+export const privateRouters: IRoute[] = [
+  {
+    path: "/main",
+    name: "Main",
+    component: Main,
   },
   {
     path: "/search",

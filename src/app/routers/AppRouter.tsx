@@ -1,15 +1,27 @@
 import { Route, Routes, Navigate } from "react-router-dom";
-import { routers } from "./routers";
+import { privateRouters, publicRouters } from "./routers";
+import { useAppSelector } from "../../hooks/redux";
 
 const AppRouter = () => {
+  const isAuth = useAppSelector((state) => state.auth.isAuth);
   return (
     <div>
       <Routes>
-        {routers.map((route) => (
+        {publicRouters.map((route) => (
           <Route
             key={route.path}
             path={route.path}
             element={<route.component />}
+          />
+          
+        ))}
+        {privateRouters.map((route) => (
+          <Route
+            key={route.path}
+            path={route.path}
+            element={
+              isAuth ? <route.component /> : <Navigate to="/authorization" />
+            }
           />
         ))}
         <Route path="*" element={<Navigate to="/main" />} />
