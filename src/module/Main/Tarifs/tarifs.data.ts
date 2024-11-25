@@ -15,7 +15,10 @@ export const tarifsData = [
     ],
     styles: {
       backgroundColor: "#ffb64f",
+      authBorderColor: "2px solid #ffb64f",
     },
+    buttonText: "Подробнее",
+    authButtonText: "Перейти в личный кабинет",
   },
   {
     id: 2,
@@ -34,6 +37,7 @@ export const tarifsData = [
     styles: {
       backgroundColor: "#7ce3e1",
     },
+    buttonText: "Подробнее",
   },
   {
     id: 3,
@@ -52,5 +56,6 @@ export const tarifsData = [
     styles: {
       backgroundColor: "#000",
     },
+    buttonText: "Подробнее",
   },
 ];

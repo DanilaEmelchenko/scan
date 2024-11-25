@@ -119,6 +119,10 @@
           position: relative;
           overflow: hidden;
         }
+        & .card__bottom-button--auth {
+          background-color: #d2d2d2;
+          color: #000;
+        }
       }
     }
   }

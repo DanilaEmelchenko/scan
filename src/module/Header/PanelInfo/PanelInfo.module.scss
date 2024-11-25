@@ -1,0 +1,42 @@
+@use "../../../app/styles/fonts";
+@use "../../../app/styles/variables" as var;
+
+.panelInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 7px;
+  border-radius: 5px;
+  background-color: var.$color-gray-exstraLight;
+  padding: clamp(0.313rem, 0.108rem + 1.02vw, 0.875rem) 8px
+    clamp(0.313rem, 0.085rem + 1.14vw, 0.938rem) 10px;
+  & .top {
+    display: flex;
+    gap: 9px;
+    @media only screen and (max-width: 790px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    & .count {
+      font-weight: 700;
+      font-size: 14px;
+    }
+  }
+  & .bottom {
+    display: flex;
+    gap: 9px;
+    @media only screen and (max-width: 790px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    & .count {
+      font-weight: 700;
+      font-size: 14px;
+      color: var.$color-green;
+    }
+  }
+  .title {
+    font-size: 10px;
+    opacity: 0.4;
+  }
+}

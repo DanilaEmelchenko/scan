@@ -6,16 +6,25 @@
   letter-spacing: 0.01em;
   max-width: 1440px;
   margin: 0 auto;
-  padding-right: clamp(1.625rem, 1.018rem + 3.04vw, 3.75rem);
-  padding-left: clamp(0.875rem, 0.054rem + 4.11vw, 3.75rem);
+  padding: clamp(0.563rem, 0.426rem + 0.68vw, 0.938rem)
+    clamp(1.625rem, 0.852rem + 3.86vw, 3.75rem)
+    clamp(0.563rem, 0.426rem + 0.68vw, 0.938rem)
+    clamp(0.875rem, -0.17rem + 5.23vw, 3.75rem);
   display: flex;
-  justify-content: space-between;
   align-items: center;
   & .logo-footer,
   & .logo-header {
     z-index: 5;
   }
-  & .logo-footer {
-    margin-top: -22.5px;
+  & .right {
+    width: 100%;
+    margin-left: 401px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media screen and (max-width: 790px) {
+      margin-left: 0;
+     
+    }
   }
 }

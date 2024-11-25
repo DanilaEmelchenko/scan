@@ -1,14 +1,17 @@
+import { useAppSelector } from "../../../hooks/redux";
 import Button from "../../../ui/Button/Button";
 import { chunkArray } from "../../../utils/chunkArray";
 import { tarifsData } from "./tarifs.data";
 import s from "./Tarifs.module.scss";
+import cn from "classnames";
 
 const Tarifs = () => {
+  const isAuth = useAppSelector((state) => state.auth.isAuth);
   return (
     <section className={s.tarifs}>
       <h2 className={s.title}>Наши тарифы</h2>
       <div className={s.cards}>
-        {tarifsData.map((tarif) => {
+        {tarifsData.map((tarif, index) => {
           const listChunks = chunkArray(tarif.list, 3);
           return (
             <div key={tarif.id} className={s.card}>
@@ -36,7 +39,12 @@ const Tarifs = () => {
                   alt="icon"
                 />
               </div>
-              <div className={s.card__bottom}>
+              <div
+                className={s.card__bottom}
+                style={
+                  isAuth ? { border: tarif.styles.authBorderColor } : undefined
+                }
+              >
                 <div className={s["card__bottom-content"]}>
                   <h3 className={s["card__bottom-price"]}>{tarif.price}</h3>
                   <h3 className={s["card__bottom-priceThrough"]}>
@@ -68,8 +76,15 @@ const Tarifs = () => {
                   ))}
                 </div>
                 <div className={s["card__bottom-buttonWrapper"]}>
-                  <Button className={s["card__bottom-button"]}>
-                    Подробнее
+                  <Button
+                    className={cn(
+                      s["card__bottom-button"],
+                      isAuth && index === 0 && s["card__bottom-button--auth"]
+                    )}
+                  >
+                    {isAuth && index === 0
+                      ? tarif.authButtonText
+                      : tarif.buttonText}
                   </Button>
                 </div>
               </div>
